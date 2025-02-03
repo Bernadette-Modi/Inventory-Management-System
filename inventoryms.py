@@ -31,3 +31,11 @@ class Inventory:
             for name, details in self.items.items():
                 print(f"{name} - Quantity: {details['quantity']}, Price: ${details['price']}")
     
+inventory = Inventory()
+while True:
+    print("\nInventory Management System")
+    print("1. Add Item")
+    print("2. Update Item")
+    print("3. Remove Item")
+    print("4. View Inventory")
+    print("5. Exit")
