@@ -15,3 +15,11 @@ class Inventory:
             print(f"{name} updated successfully.")
         else:
             print(f"{name} not fount in inventory.")
+    
+    def remove_item(self, name):
+        if name in self.items:
+            del self.items[name]
+            print(f"{name} removed from inventory.")
+        else:
+            print(f"{name} not found in inventory.")
+            
