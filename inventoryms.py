@@ -22,4 +22,12 @@ class Inventory:
             print(f"{name} removed from inventory.")
         else:
             print(f"{name} not found in inventory.")
-            
+
+    def view_inventory(self):
+        if not self.items:
+            print("Inventory is empty.")
+        else:
+            print("\ncurrent Inventory: ")
+            for name, details in self.items.items():
+                print(f"{name} - Quantity: {details['quantity']}, Price: ${details['price']}")
+    
