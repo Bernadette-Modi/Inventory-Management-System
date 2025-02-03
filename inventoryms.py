@@ -39,3 +39,25 @@ while True:
     print("3. Remove Item")
     print("4. View Inventory")
     print("5. Exit")
+
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        name = input("enter item name: ")
+        quantity = int(input("Enter quantity: "))
+        price = float(input("Enter price: "))
+        inventory.add_item(name, quantity, price)
+    elif choice== "2":
+        name = input("Enter item name: ")
+        quantity = int(input("Enter new quantity: "))
+        price = float(input("Enter new price: "))
+        inventory.update_item(name, quantity, price)
+    elif choice == "3":
+        name = input("Enter item name to remove: ")
+        inventory.remove_item(name)
+    elif choice == "4":
+        inventory.view_inventory
+    elif choice == "5":
+        print("Exiting inventory System.")
+        break 
+    else: 
+        print("Invalid choice! Please try again.")
